@@ -1070,6 +1070,8 @@ class ExtConfigMixin(object):
                 if t not in (None, "string"):
                     exc.default = self.convert(t, exc.default)
                 raise exc
+        if "{%s}" % o in val:
+            return val
         try:
             val = self.handle_references(val, scope=scope,
                                          impersonate=impersonate,

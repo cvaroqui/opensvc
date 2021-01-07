@@ -49,6 +49,8 @@ REFS = [  # (name, value, expected_evaluated_value),
     ("ref_var", "{var}", "OSVC_PATH_TESTS/var"),
     ("ref_private_var", "{private_var}", "OSVC_PATH_TESTS/var/svc/%s" % SVCNAME),
     ("ref_initd", "{initd}", "OSVC_PATH_TESTS/etc/%s.d" % SVCNAME),
+    ("recurse1", "{recurse1}", "{recurse1}"),
+    ("recurse2", "some {recurse2}", "some {recurse2}"),
 ]
 
 
